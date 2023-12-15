@@ -1,0 +1,10 @@
+/.idea/
+/target/
+/.classpath
+/.project
+/iid-services.iml
+/.settings/
+.DS_Store
+/.factorypath
+
+
