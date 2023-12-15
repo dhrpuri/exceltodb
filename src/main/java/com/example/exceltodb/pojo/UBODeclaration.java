@@ -4,7 +4,7 @@ import lombok.Data;
 
 import java.util.List;
 @Data
-public class UBODeclarationType {
+public class UBODeclaration {
 
     private String	companyIssueAuthorityID;
     private String	mobile;
@@ -13,6 +13,5 @@ public class UBODeclarationType {
     private String	declarationDate;
     private boolean	isExemptIncomeSourceCheck;
     private boolean	isExemptPEPDeclaration;
-
     private List<UBOs> ubOsList;
 }
