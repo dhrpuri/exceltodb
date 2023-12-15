@@ -1,6 +1,6 @@
 package com.example.exceltodb.controller;
 
-import com.example.exceltodb.excelutility.ExcelReader;
+import com.example.exceltodb.service.ExcelReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

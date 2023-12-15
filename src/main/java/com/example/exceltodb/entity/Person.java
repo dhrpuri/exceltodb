@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.lang.reflect.InvocationTargetException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
@@ -30,7 +31,7 @@ public class Person {
     private Date birthDate;
 
     @Column(name = "gender")
-    private int gender;
+    private Integer gender;
 
     @Column(name = "unified_id")
     private String unifiedID;
@@ -87,13 +88,13 @@ public class Person {
     private String mobile;
 
     @Column(name = "status")
-    private int status;
+    private Integer status;
 
     @Column(name = "nationality")
     private String nationality;
 
     @Column(name = "language_preference")
-    private int languagePreference;
+    private Integer languagePreference;
 
     @Column(name = "file_number")
     private String fileNumber;
@@ -105,7 +106,7 @@ public class Person {
     private boolean isVerifiedContact;
 
     @Column(name = "last_updated_by")
-    private int lastUpdatedBy;
+    private Integer lastUpdatedBy;
 
     @Column(name = "is_mobile_verified")
     private boolean isMobileVerified;
@@ -114,7 +115,7 @@ public class Person {
     private LocalDateTime mobileVerificationDate;
 
     @Column(name = "mobile_verification_channel")
-    private int mobileVerificationChannel;
+    private Integer mobileVerificationChannel;
 
     @Column(name = "is_email_verified")
     private boolean isEmailVerified;
@@ -123,7 +124,7 @@ public class Person {
     private Date emailVerificationDate;
 
     @Column(name = "email_verification_channel")
-    private int emailVerificationChannel;
+    private Integer emailVerificationChannel;
 
     @Column(name = "is_screened")
     private boolean isScreened;
@@ -132,7 +133,7 @@ public class Person {
     private LocalDateTime screeningDate;
 
     @Column(name = "screening_channel")
-    private int screeningChannel;
+    private Integer screeningChannel;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id", referencedColumnName = "id")
