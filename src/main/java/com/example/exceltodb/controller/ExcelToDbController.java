@@ -1,5 +1,6 @@
 package com.example.exceltodb.controller;
 
+import com.example.exceltodb.processor.PersonSheetProcessor;
 import com.example.exceltodb.service.ExcelReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,10 +17,21 @@ public class ExcelToDbController {
 
     @Autowired
     ExcelReader excelReader;
+
+    @Autowired
+    PersonSheetProcessor personSheetProcessor;
+
+//    @PostMapping("/upload")
+//    public ResponseEntity<Object> uploadFile(@RequestParam("file") MultipartFile file) {
+//        LOGGER.info("Request received to upload file", file.getName());
+//        return new ResponseEntity<>(excelReader.readExcel(file), HttpStatus.OK);
+//    }
+
     @PostMapping("/upload")
-    public ResponseEntity<Object> uploadFile(@RequestParam("file") MultipartFile file) {
-        LOGGER.info("Request received to upload file", file.getName());
-        return new ResponseEntity<>(excelReader.readExcel(file), HttpStatus.OK);
+    public ResponseEntity<Void> uploadFile() {
+        LOGGER.info("Request received to upload file");
+        personSheetProcessor.processor();
+        return null;
     }
 
 }

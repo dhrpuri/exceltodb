@@ -9,38 +9,22 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
-@Table(name = "document")
 @Data
 @ToString
 @NoArgsConstructor
+@Table(name = "document")
 public class Document {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(name = "person_issue_authority_id")
-    private String personIssueAuthorityID;
-
-    @Column(name = "company_issue_authority_id")
-    private String companyIssueAuthorityID;
-
-    @Column(name = "type")
-    private int type;
-
-    @Column(name = "upload_date")
+    private Integer id;
+    private Integer legalEntityId;
+    private Integer unifiedLicenceNumber;
+    private Integer unifiedTradeNameNumber;
+    private Integer typeId;
     private LocalDateTime uploadDate;
-
-    @Column(name = "issue_authority_reference")
+    private Integer issueAuthorityId;
     private String issueAuthorityReference;
-
-    @Column(name = "issue_authority_transaction")
-    private String issueAuthorityTransaction;
-
-    @Column(name = "issue_authority_licence_number")
-    private Integer issueAuthorityLicenceNumber;
-
-    @Column(name = "issue_authority_trade_name_number")
-    private Integer issueAuthorityTradeNameNumber;
+    private Integer issueAuthorityTransaction;
+    private Integer mimeTypeId;
 }
 

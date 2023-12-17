@@ -48,19 +48,19 @@ public class ExcelReader {
         String sheetName = sheet.getSheetName().toUpperCase();
         switch (sheetName) {
             case "PERSON":
-                personSheetProcessor.processPersonSheet(sheet);
+                personSheetProcessor.processor();
                 logger.info("Processing Person Sheet");
                 break;
 
-            case "ADDRESS":
-                addressSheetProcessor.processAddressSheet(sheet);
-                logger.info("Processing Address Sheet");
-                break;
-
-            case "DOCUMENT":
-                documentSheetProcessor.processDocumentSheet(sheet);
-                logger.info("Processing Document Sheet");
-                break;
+//            case "ADDRESS":
+//                addressSheetProcessor.processAddressSheet(sheet);
+//                logger.info("Processing Address Sheet");
+//                break;
+//
+//            case "DOCUMENT":
+//                documentSheetProcessor.processDocumentSheet(sheet);
+//                logger.info("Processing Document Sheet");
+//                break;
             // Add more cases for other sheets as needed
 
             default:
