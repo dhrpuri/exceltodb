@@ -13,7 +13,6 @@
 package com.example.exceltodb.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import io.swagger.annotations.ApiModelProperty;
 
 import java.util.Objects;
 /**
@@ -44,7 +43,7 @@ public class Error {
    * Get errorCode
    * @return errorCode
   **/
-  @ApiModelProperty(required = true, value = "")
+
   public String getErrorCode() {
     return errorCode;
   }
@@ -62,7 +61,7 @@ public class Error {
    * Get errorDate
    * @return errorDate
   **/
-  @ApiModelProperty(required = true, value = "")
+  
   public String getErrorDate() {
     return errorDate;
   }
@@ -80,7 +79,7 @@ public class Error {
    * Get errorMessage
    * @return errorMessage
   **/
-  @ApiModelProperty(required = true, value = "")
+  
   public String getErrorMessage() {
     return errorMessage;
   }
