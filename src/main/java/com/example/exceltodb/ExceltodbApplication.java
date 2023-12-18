@@ -6,6 +6,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 import java.io.FileInputStream;
 import java.sql.Connection;
@@ -14,6 +15,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 @SpringBootApplication
+@EnableFeignClients
 public class ExceltodbApplication {
 
 	public static void main(String[] args) {
