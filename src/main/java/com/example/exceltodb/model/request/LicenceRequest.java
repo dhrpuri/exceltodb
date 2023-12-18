@@ -1,7 +1,5 @@
 package com.example.exceltodb.model.request;
 
-import com.example.exceltodb.model.*;
-
 import java.util.List;
 
 public class LicenceRequest {

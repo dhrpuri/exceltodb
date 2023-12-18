@@ -1,6 +1,5 @@
 package com.example.exceltodb.model.request;
 
-import com.example.exceltodb.model.*;
 import lombok.Data;
 
 import java.util.List;

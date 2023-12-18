@@ -1,9 +1,5 @@
 package com.example.exceltodb.model.request;
 
-import com.example.exceltodb.model.IncomeCountryDTO;
-import com.example.exceltodb.model.IncomeSourceDTO;
-import com.example.exceltodb.model.LegalEntityDTO;
-import com.example.exceltodb.model.UboPersonDTO;
 import lombok.Data;
 
 import java.util.List;
