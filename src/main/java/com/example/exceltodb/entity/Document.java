@@ -16,15 +16,24 @@ import java.util.Date;
 public class Document {
 
     @Id
-    private Integer id;
-    private Integer legalEntityId;
-    private Integer unifiedLicenceNumber;
-    private Integer unifiedTradeNameNumber;
-    private Integer typeId;
-    private LocalDateTime uploadDate;
-    private Integer issueAuthorityId;
+    private String id;
+
+    private String legalEntityId;
+
+    private String unifiedLicenceNumber;
+
+    private String tradeNameUnifiedTradeNameNumber;
+
+    private String typeId;
+
+    private String uploadDate;
+
+    private String issueAuthorityId1;
+
     private String issueAuthorityReference;
-    private Integer issueAuthorityTransaction;
-    private Integer mimeTypeId;
+
+    private String issueAuthorityTransaction;
+
+    private String mimeTypeId;
 }
 

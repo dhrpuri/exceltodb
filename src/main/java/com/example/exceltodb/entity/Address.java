@@ -13,23 +13,40 @@ import javax.persistence.*;
 public class Address {
 
     @Id
-    private Integer id;
-    private Integer area;
-    private Integer addressTypeId;
-    private Integer poBox;
+    private String id;
+
+    private String areaCode;
+
+    private String addressTypeId;
+
+    private String poBox;
+
     private String addressLine1;
+
     private String addressLine2;
-    private Integer floor;
-    private Integer street;
-    private Integer unitTypeId;
+
+    private String floor;
+
+    private String street;
+
+    private String unitTypeId;
+
     private String unitNumber;
+
     private String parcelId;
-    private Integer countryId;
-    private Integer emirateId;
+
+    private String countryId;
+
+    private String emirateId;
+
     private String state;
-    private Integer freezoneId;
-    private Double longitude;
-    private Double latitude;
+
+    private String freezoneId;
+
+    private String longitude;
+
+    private String latitude;
+
     private String relatedEntityCode;
 }
 

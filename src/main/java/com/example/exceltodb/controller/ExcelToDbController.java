@@ -10,6 +10,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.sql.SQLException;
+
 @RestController
 @RequestMapping("/excel")
 public class ExcelToDbController {
@@ -21,16 +24,14 @@ public class ExcelToDbController {
     @Autowired
     PersonSheetProcessor personSheetProcessor;
 
-//    @PostMapping("/upload")
-//    public ResponseEntity<Object> uploadFile(@RequestParam("file") MultipartFile file) {
-//        LOGGER.info("Request received to upload file", file.getName());
-//        return new ResponseEntity<>(excelReader.readExcel(file), HttpStatus.OK);
-//    }
-
-    @PostMapping("/upload")
+    @GetMapping("/upload")
     public ResponseEntity<Void> uploadFile() {
         LOGGER.info("Request received to upload file");
-        personSheetProcessor.processor();
+        try {
+            personSheetProcessor.readAndWriteToDB();
+        }  catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         return null;
     }
 

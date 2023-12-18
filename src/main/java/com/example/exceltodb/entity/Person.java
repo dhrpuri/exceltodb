@@ -7,11 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.lang.reflect.InvocationTargetException;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+
 
 @Data
 @NoArgsConstructor
@@ -21,6 +17,7 @@ import java.util.List;
 public class Person {
     @Id
     private String id;
+    private String issueAuthorityId1;
     private String issueAuthorityId;
     private String birthDate;
     private String genderId;
